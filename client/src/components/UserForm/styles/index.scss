@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  width: 500px;
+  margin: auto;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+input,
+select {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+
+input[type="radio"] {
+  width: 25px;
+  height: 15px;
+}
+
+#submit {
+  width: 150px;
+  height: 40px;
+  background-color: #42ab56;
+  border-radius: 20px;
+  color: white;
+  margin:5px 0px 12px 0px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 300px;
+    height: 500px;
+  }
+
+  input,
+  select {
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px 0px;
+  }
+  label{
+    font-size:12px;
+  }
+
+  #submit{
+    width: 100px;
+    height: 25px;
+  }
+  
+}
+
+@media screen and (max-width: 380px) {
+}

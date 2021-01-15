@@ -1,0 +1,168 @@
+#admin-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 15px;
+}
+
+#main-content #table-content {
+  text-align: center;
+}
+
+table {
+  width: 900px;
+  margin: auto;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.userlist {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+td #active {
+  background-color: #42ab56;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+td #passive {
+  background-color: red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 1px;
+  height: 50px;
+}
+
+#edit-button {
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #f0ad4e;
+}
+
+#edit-button a {
+  text-decoration: none;
+}
+
+#delete-button {
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #e51937;
+  margin-left: 2px;
+}
+
+footer {
+  margin: 20px;
+}
+
+#add-button {
+  background-color: #42ab56;
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  table {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  table td:nth-child(4),
+  table th:nth-child(4) {
+    display: none;
+  }
+  table {
+    width: 300px;
+  }
+  #edit-button,
+  #delete-button,
+  #add-button {
+    width: 75px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+  }
+  #edit-button a,
+  #delete-button a,
+  #add-button a {
+    text-decoration: none;
+  }
+  #main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  table td:nth-child(2),
+  table th:nth-child(2),
+  table td:nth-child(3),
+  table th:nth-child(3),
+  table td:nth-child(4),
+  table th:nth-child(4) {
+    display: none;
+  }
+  table {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=index.css.map */

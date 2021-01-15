@@ -1,0 +1,155 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin btnFont {
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+@mixin btnFontTablet {
+  width: 75px;
+  height: 25px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 10px;
+  a {
+    text-decoration: none;
+  }
+}
+
+@mixin tdth {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 1px;
+  height: 50px;
+}
+
+$activeBtnColor: #42ab56;
+$passiveBtnColor: red;
+$editBtnColor: #f0ad4e;
+$deleteBtnColor: #e51937;
+$addBtnColor: #42ab56;
+
+#admin-panel {
+  @include flexCenter(column);
+}
+
+#main-content {
+  @include flexCenter(row);
+  #table-content {
+    text-align: center;
+  }
+  margin-top: 15px;
+}
+
+thead {
+  //   background-color: rgb(90, 9, 240);
+}
+table {
+  width: 900px;
+  margin: auto;
+}
+
+tbody {
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}
+
+.userlist {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+td {
+  #active {
+    background-color: $activeBtnColor;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+  }
+}
+td {
+  #passive {
+    background-color: $passiveBtnColor;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+td,
+th {
+  @include tdth();
+}
+
+#edit-button {
+  @include btnFont();
+  background-color: $editBtnColor;
+  a {
+    text-decoration: none;
+  }
+}
+#delete-button {
+  @include btnFont();
+  background-color: $deleteBtnColor;
+  margin-left: 2px;
+}
+
+footer {
+  margin: 20px;
+}
+
+#add-button {
+  background-color: $addBtnColor;
+  @include btnFont();
+}
+
+@media screen and (max-width: 1024px) {
+  table {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  table td:nth-child(4),
+  table th:nth-child(4) {
+    display: none;
+  }
+
+  table {
+    width: 300px;
+  }
+
+  #edit-button,
+  #delete-button,
+  #add-button {
+    @include btnFontTablet();
+  }
+
+  #main-content {
+    @include flexCenter(column);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  table td:nth-child(2),
+  table th:nth-child(2),
+  table td:nth-child(3),
+  table th:nth-child(3),
+  table td:nth-child(4),
+  table th:nth-child(4) {
+    display: none;
+  }
+
+  table {
+    width: 100%;
+  }
+}
