@@ -19,7 +19,7 @@ function UserForm() {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:5000/api/users/${id}`)
+        .get(`/api/users/${id}`)
         .then((user) => {
           setusername(user.data.username);
           setfirstName(user.data.firstName);

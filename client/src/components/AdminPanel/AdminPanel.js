@@ -13,13 +13,13 @@ function AdminPanel() {
     }
 
     axios
-      .delete(`http://localhost:5000/api/users/${user_id}`)
+      .delete(`/api/users/${user_id}`)
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users")
+      .get("/api/users")
       .then((users) => setusers(users.data))
       .catch((err) => console.log(err));
   }, [users]);
